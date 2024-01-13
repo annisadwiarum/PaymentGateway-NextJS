@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 
 let snap = new Midtrans.Snap({
     isProduction: false,
-    serverKey: process.env.NEXT_PUBLIC_SECRET,
-    clientKey: process.env.SECRET
+    serverKey: process.env.SECRET,
+    clientKey: process.env.NEXT_PUBLIC_CLIENT
 })
 
 export async function POST(request) {

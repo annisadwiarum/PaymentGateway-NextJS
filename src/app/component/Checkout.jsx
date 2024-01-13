@@ -26,10 +26,10 @@ const Checkout = () => {
       method: "POST",
       body: JSON.stringify(data)
     })
-    console.log(response)
     
-    // const requestData = await response.json();
-    // window.snap.pay(requestData.token)
+    const requestData = await response.json();
+    // console.log({requestData})
+    window.snap.pay(requestData.token)
     };
     
     // GENERATE DI BAWAH INI BUAT PAYMENT LINK
