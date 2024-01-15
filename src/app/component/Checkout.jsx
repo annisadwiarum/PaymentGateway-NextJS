@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Checkout = () => {
   const [quantity, setQuantity] = useState(1);
-//   const [paymentUrl, setPaymentUrl] = useState(); state buat payment link
+  // const [paymentUrl, setPaymentUrl] = useState();
   
   const decreaseQuantity = () => {
     setQuantity((prevState) => (quantity > 1 ? prevState - 1 : null));
@@ -34,42 +34,42 @@ const Checkout = () => {
     
     // GENERATE DI BAWAH INI BUAT PAYMENT LINK
   
-//   const generatePaymentLink = async () => {
-//     const secret = process.env.NEXT_PUBLIC_SECRET
-//     const encodeSecret = Buffer.from(secret).toString('base64')
-//     const basicAuth = `Basic ${encodeSecret}`
+  // const generatePaymentLink = async () => {
+  //   const secret = process.env.NEXT_PUBLIC_SECRET
+  //   const encodeSecret = Buffer.from(secret).toString('base64')
+  //   const basicAuth = `Basic ${encodeSecret}`
     
-//     let data = {
-//       item_details: [
-//         {
-//           id: product.id,
-//           name: product.name,
-//           price: product.price,
-//           quantity: quantity
-//         }
-//       ],
-//       transaction_details:
-//       {
-//         order_id: product.id,
-//         gross_amount: product.price * quantity
-//       }
-//     }
+  //   let data = {
+  //     item_details: [
+  //       {
+  //         id: product.id,
+  //         name: product.name,
+  //         price: product.price,
+  //         quantity: quantity
+  //       }
+  //     ],
+  //     transaction_details:
+  //     {
+  //       order_id: product.id,
+  //       gross_amount: product.price * quantity
+  //     }
+  //   }
     
-//     const response = await fetch(`${process.env.NEXT_PUBLIC_API}/v1/payment-links`, {
-//       method: "POST",
-//       headers: {
-//         "Accept": "application/json",
-//         "Content-Type": "application/json",
-//         "Authorization": basicAuth
-//       },
-//       body: JSON.stringify(data)
-//     })
+  //   const response = await fetch(`${process.env.NEXT_PUBLIC_API}/v1/payment-links`, {
+  //     method: "POST",
+  //     headers: {
+  //       "Accept": "application/json",
+  //       "Content-Type": "application/json",
+  //       "Authorization": basicAuth
+  //     },
+  //     body: JSON.stringify(data)
+  //   })
     
-//     const paymentLink = await response.json()
-//     // console.log(paymentLink.payment_url)
-//     console.log(paymentLink.payment_url)
-//     setPaymentUrl(paymentLink.payment_url)
-//   };
+  //   const paymentLink = await response.json()
+  //   // console.log(paymentLink.payment_url)
+  //   console.log(paymentLink.payment_url)
+  //   setPaymentUrl(paymentLink.payment_url)
+  // };
   
   return (
     <>
@@ -104,12 +104,12 @@ const Checkout = () => {
           Checkout
         </button>
       </div>
-      {/* <button
+       {/* <button
         className="text-indigo-500 py-4 text-sm font-medium transition hover:scale-105"
         onClick={generatePaymentLink}
       >
         Create Payment Link
-      </button> */}
+      </button>  */}
       {/* <div>
         <button onClick={paymentUrl} className="text-black underline italic">Klik di sini untuk melakukan pembayaran</button>
       </div> */}
